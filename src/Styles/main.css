@@ -1,0 +1,121 @@
+@import url('https://fonts.google.com/share?selection.family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.active{
+    color: var(--mainColorLight) !important;
+}
+
+:root{
+    --mainColor: green;
+    --mainColorLight: blue;
+    --secondaryColor: #ffae44;
+    --textColor: black;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    padding: 0 2%;
+    background-color: var(--mainColor);
+    color: var(--textColor);
+    position: sticky;
+    top: 0;
+}
+
+nav .title {
+    margin: 20px;
+    text-decoration: none;
+    color: var(--textColor);
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+}
+
+nav ul li a{
+    display: block;
+    color: white;
+    padding: 5px;
+    margin: 0 0.5rem; ;
+
+}
+nav a:hover{
+    color: var(--mainColorLight);
+}
+
+nav .menu{
+    position: absolute;
+    top: 0.75rem;
+    right: 0.5rem;
+    flex-direction: column;
+    width: 2.25rem;
+    height: 2rem;
+    background-color: var(--mainColor);
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+nav .menu span{
+    height: 0.4rem;
+    width: 100%;
+    background-color: var(--textColor);
+    border-radius: 20px;
+
+}
+
+
+@media only screen and (max-width: 1050px) {
+ 
+    
+    nav .menu{
+        display: flex;
+    }
+
+    nav {
+      flex-direction: column;
+      align-items: start; 
+       
+    }
+
+    nav ul{
+        display: none; 
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 0.25rem;
+        background-color: var(--mainColor);
+    }
+
+    nav ul.open{
+        display: flex;
+    }
+
+    nav ul li{
+        text-align: center;
+        width: 100%;
+    }
+
+    nav ul li a{
+        margin: 0.5rem 0;
+    }
+
+    button{
+        width: 160px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    
+    }
+}
